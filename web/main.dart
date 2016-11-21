@@ -3,6 +3,7 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
+import 'lib/mud.dart';
 
 void main() {
   querySelector("#enter").onClick.listen(clickedOnEnter);
@@ -37,34 +38,8 @@ clickedOnEnter(e) {
   querySelector("#output").appendHtml(outputHTML);
 }
 
-class Environment {
 
-  String name;
-  Encounter encounter = new Bear();
 
-  Environment(this.name);
 
-  String stumbleUpon() {
-    return "${this.name} You stumble upon something ${this.encounter.whenEncounter()}";
-  }
-}
 
-abstract class Encounter {
-  whenEncounter();
-}
 
-class Bear extends Encounter {
-
-  @override
-  whenEncounter() {
-    return "grr grow, You encounter a bear!";
-  }
-}
-
-class Ghost extends Encounter {
-
-  @override
-  whenEncounter() {
-    return "Booh, you encounter a Ghost!";
-  }
-}
