@@ -1,9 +1,11 @@
 library mud;
-
-part 'encounter.dart';
-
-part 'bear.dart';
-
-part 'ghost.dart';
-
+import 'dart:math';
+part 'encounter/ghost.dart';
+part 'encounter/bear.dart';
+part 'encounter/encounter.dart';
+part 'encounter/angel.dart';
+part 'encounter/drunken_sailer.dart';
+part 'encounter/goblin.dart';
+part 'encounter/nothing.dart';
+part 'encounter/vampire.dart';
 part 'environment.dart';
