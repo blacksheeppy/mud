@@ -3,7 +3,7 @@ part of mud;
 class Environment {
 
   String _name;
-  Encounter encounter = new Encounter(6);
+  Encounter encounter = new Encounter({});
 
   Environment(name) {
     this.name = name;
@@ -16,7 +16,7 @@ class Environment {
   }
 
   String stumbleUpon() {
-    this.encounter = new Encounter(6);
+    this.encounter = new Encounter({"number": 6, "damage":3});
     var done_damage = damage;
     var interaction = "${this._name} You stumble upon something ${this.encounter
         .whenEncounter()}";

@@ -5,11 +5,13 @@ abstract class Encounter {
 
   Encounter._();
 
-  factory Encounter(int number){
-    var damage_value = 6;
+  factory Encounter(Map options){
+    //options ??= new Map();
+    var number = options["number"] != null ? options["number"] : 1;
+    var damage_value = options["damage"] != null ? options["damage"] : 1;
     var _rng = new Random();
     var value = _rng.nextInt(number);
-    switch(value){
+    switch (value) {
       case 1:
         return new Bear();
       case 2:
