@@ -8,4 +8,6 @@ part 'encounter/drunken_sailer.dart';
 part 'encounter/goblin.dart';
 part 'encounter/nothing.dart';
 part 'encounter/vampire.dart';
+part 'encounter/random_damage.dart';
+part 'encounter/say_something.dart';
 part 'environment.dart';

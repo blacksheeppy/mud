@@ -6,9 +6,9 @@ abstract class Encounter {
   Encounter._();
 
   factory Encounter(Map options){
-    //options ??= new Map();
-    var number = options["number"] != null ? options["number"] : 1;
-    var damage_value = options["damage"] != null ? options["damage"] : 1;
+    options ??= new Map();
+    var number = options["number"] ?? 1;
+    var damage_value = options["damage"] ?? 1;
     var _rng = new Random();
     var value = _rng.nextInt(number);
     switch (value) {

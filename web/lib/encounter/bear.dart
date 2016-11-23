@@ -1,6 +1,6 @@
 part of mud;
 
-class Bear extends Encounter {
+class Bear extends Encounter with RandomDamage {
   Bear() : super._();
 
   var _nrg = new Random();
