@@ -11,7 +11,7 @@ void main() {
     test("test encounter factory constructor", () {
       expect(encounter == null || encounter
           .whenEncounter()
-          .toString().length > 5, true);
+          .length > 5, true);
     });
 
     test("test encounter damage bigger then zero ", () {
