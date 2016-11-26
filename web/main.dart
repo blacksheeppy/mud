@@ -8,6 +8,8 @@ import 'lib/mud.dart';
 
 int x = 0,
     y = 0;
+Person person = new Person(x, y, 200, 5);
+
 
 void main() {
   querySelector("#enter").onClick.listen(clickedOnEnter);
