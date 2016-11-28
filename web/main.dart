@@ -3,15 +3,22 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
-
 import 'lib/mud.dart';
+import 'package:http/browser_client.dart';
+import 'package:mud/client/world.dart';
 
 int x = 0,
     y = 0;
+final String _severUrl = 'localhost:8083/';
+final BrowserClient _client = new BrowserClient();
+World _api;
+
 Person person = new Person(x, y, 200, 5);
 
 
 void main() {
+  var protocol = window.location.protocol;
+
   querySelector("#enter").onClick.listen(clickedOnEnter);
   updateCoordinates(0, 0);
 }

@@ -10,6 +10,10 @@ environment:
 dependencies:
 #  my_dependency: any
   unittest:
+  rpc: '^0.5.5'
+  http: '>=0.11.1 <0.12.0'
+  _discoveryapis_commons: '>=0.1.0 <0.2.0'
+
 
 dev_dependencies:
   browser: '>=0.10.0 <0.11.0'
