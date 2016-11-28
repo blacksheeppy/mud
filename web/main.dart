@@ -52,7 +52,7 @@ clickedOnEnter(e) {
   var outputHTML = "<div>${output}</div>";
   querySelector("#output").appendHtml(outputHTML);
 
-  var interaction = myEnvironment.stumbleUpon();
+  var interaction = myEnvironment.stumbleUpon(null);
   outputHTML = "<div>${interaction}</div>";
   querySelector("#output").appendHtml(outputHTML);
 }
